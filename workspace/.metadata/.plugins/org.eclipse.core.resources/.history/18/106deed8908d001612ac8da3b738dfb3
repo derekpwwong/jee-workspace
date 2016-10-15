@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index</title>
+<link rel="stylesheet" type ="text/css" href="css/style.css">
+</head>
+<body>
+<Div>
+<table>
+<tr>
+<th class="title" align="center">
+Derek Wong. Software Engineering
+</th>
+</tr>
+</table>
+</Div>
+<Form>
+<fieldset>
+<legend> Lecture</legend>
+<ul>
+<li><a href="lecture1.html">Lecture 1</a> : Simple HTML Page</li>
+<li><a href="lecture2.jsp">Lecture 2</a>: Simple JSP Page</li>
+</ul>
+</fieldset>
+<fieldset>
+<legend> Lab</legend>
+<ul>
+<li><a href="/BouletRandomNumber">Boulet Random Number</a> : Displays ten random numbers as a bullet list</li>
+
+</ul>
+</fieldset>
+</Form>
+</body>
+</html>

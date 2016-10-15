@@ -1,0 +1,37 @@
+package servletPackage;
+import java.io.*;
+import java.util.Random;
+
+import javax.servlet.*;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+
+@WebServlet("/BouletRandomNumber")
+public class BouletRandomNumber extends HttpServlet{
+	@Override
+	public void doGet(HttpServletRequest request,
+			HttpServletResponse response)
+	throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE htmL>\n <html>\n" +
+				"<head><title>Servlet Generating Boulet Number List</title>" +
+				"</head> \n <body bgcolor=\"#fdf5e6\">\n" +
+				"<h1>A Boulet List</h1>\n"+
+				"<h2>Great inspiration for the Hangman Game</h2>" +
+				"<div><UL>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "<li>" +new Random().nextInt(100)+"</li>"
+				+ "</ul></div>" +
+				"</body></html>");
+
+	}
+}
