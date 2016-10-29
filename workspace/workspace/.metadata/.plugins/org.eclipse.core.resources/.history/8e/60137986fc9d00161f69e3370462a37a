@@ -1,0 +1,57 @@
+package Project;
+
+import java.io.*;  
+import java.sql.*;  
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;  
+
+@WebServlet("/Register")
+
+public class TestRegister extends HttpServlet{
+
+	 */
+		@Override 
+	public void doGet(HttpServletRequest request,HttpServletResponse response) 
+		throws IOException,ServletException{
+		    this.doPost(request,response);
+		}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)  
+	            throws ServletException, IOException {  
+	  
+	response.setContentType("text/html");  
+	PrintWriter out = response.getWriter();  
+	          
+	String n=request.getParameter("userName"); 
+	System.out.println(n);
+	String p=request.getParameter("userPass"); 
+	System.out.println(n);
+	String e=request.getParameter("userEmail");  
+	System.out.println(n);
+	String c=request.getParameter("userCountry"); 
+	System.out.println(n);
+	          
+	try{  
+	Class.forName("com.mysql.jdbc.Driver").newInstance();  
+	Connection con=DriverManager.getConnection(  
+	"jdbc:mysql://localhost:3306/SUBSTITUTIONCOMPRESSIONPROJECT","root","harry");  
+	  
+	PreparedStatement ps=con.prepareStatement(  
+	"insert into registeruser values(?,?,?,?)");  
+	  
+	ps.setString(1,n);  
+	ps.setString(2,p);  
+	ps.setString(3,e);  
+	ps.setString(4,c);  
+	          
+	int i=ps.executeUpdate();  
+	if(i>0)  
+	out.print("You are successfully registered...");  
+	      
+	          
+	}catch (Exception e2) {System.out.println(e2);}  
+	          
+	out.close();  
+	}  
+}

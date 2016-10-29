@@ -1,0 +1,13 @@
+package Project;
+
+import java.io.*;  
+import java.sql.*;  
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;  
+
+@WebServlet("/Register")
+
+public class TestRegister extends HttpServlet{
+
+}

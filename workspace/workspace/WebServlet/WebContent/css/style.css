@@ -49,3 +49,6 @@ h2 { color: #440000;
 	border: black solid 2px;
 	text-align:center;
 }
+.values td{
+	width:300px !important;
+}

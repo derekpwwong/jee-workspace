@@ -1,0 +1,45 @@
+package servletEncryptHuffmanCode;
+
+import java.io.*;
+
+import javax.servlet.*;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+
+import encryptHuffmanCode.EncryptHuffmanCode;
+
+
+
+@WebServlet("/ServletEncryptHuffmanCode")
+public class ServletEncryptHuffmanCode extends HttpServlet{
+	@Override
+	public void doGet(HttpServletRequest request,
+			HttpServletResponse response)
+	throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE htmL>\n <html>\n" +
+				"<head><title>ServletEncryptHuffmanCode</title>" +
+				"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">"+
+				"</head> \n <body bgcolor=\"#fdf5e6\">\n" +
+				"<h1>Encrypt huffman code!</h1>\n"+
+				"<table>"+
+				"<th>Letter</th><th>Ascii Code</th><th>Frequency</th><th>Huffman Code</th>"+
+				EncryptHuffmanCode.displayTable()+
+				"<tr>"+
+				"<td>"+
+				"Ciphered Text"+
+				"<textarea style=\"width:50%\" name=\"textarea\" rows=\"10\" cols=\"50\">"+EncryptHuffmanCode.encryptString()+"</textarea>"+
+				"</td>"+
+				
+				"<td>"+
+				"Original Text"+
+				"<textarea style=\"width:50%\" name=\"textarea\" rows=\"10\" cols=\"50\">"+EncryptHuffmanCode.originalString()+"</textarea>"+
+				"</td>"+
+				"<tr>"
+				+"</table>" 
+				+"<a href=\"index.html\">Go back to index!</a>"+
+				"</body></html>");
+
+	}
+}

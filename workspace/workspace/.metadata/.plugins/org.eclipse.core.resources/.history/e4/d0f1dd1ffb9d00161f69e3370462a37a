@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index</title>
+<link rel="stylesheet" type ="text/css" href="css/style.css">
+</head>
+<body>
+<Div>
+<table>
+<tr>
+<th class="title" align="center">
+Derek Wong. Software Engineering
+</th>
+<th class="title"><img src="https://67.media.tumblr.com/avatar_4602f314ca12_128.png"/></th>
+</tr>
+<tr>
+<td class="title" align="center">Week 06</td>
+<td class="title" align="center">Derek Wong</td>
+</tr>
+</table>
+</Div>
+<Form>
+
+<fieldset>
+<legend> Lecture</legend>
+	<ul>
+		<li><a href="lecture1.html">Lecture 1</a> : Simple HTML Page</li>
+		<li><a href="lecture2.jsp">Lecture 2</a>: Simple JSP Page</li>
+	</ul>
+</fieldset>
+<fieldset>
+<legend> Lab</legend>
+	<ul>
+		<li><a href="BouletRandomNumber">Boulet Random Number</a> : Displays ten random numbers as a bullet list</li>
+		<li><a href="ServletCreateColumnRow">Create Column and Row Servlet</a> : A servlet that can create a grid with 10 column and rows</li>
+		<li><a href="sizeMagicSquare.html">Create a Magic square of any size</a> : Creates a dynamically sized magic square</li>
+		<li><a href="setColorSizeWeight.html">Set Color size and weight</a> : set three values and return them back as a page</li>
+	</ul>
+</fieldset>
+<fieldset>
+<legend> Assignments</legend>
+	<ul>
+		<li><a href="ServletCreateMagicSquare">Display Magic Square</a> : Displays a magic square</li>
+		
+	</ul>
+</fieldset>
+<fieldset>
+<legend> Test</legend>
+	<ul>
+		<li><a href="project.html">Project 1</a> : Substisution Compression using huffman code</li>
+		
+	</ul>
+</fieldset>
+</Form>
+</body>
+</html>

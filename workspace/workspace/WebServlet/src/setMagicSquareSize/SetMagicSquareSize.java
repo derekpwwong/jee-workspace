@@ -14,7 +14,7 @@ public class SetMagicSquareSize extends HttpServlet{
 			HttpServletResponse response)
 	throws ServletException, IOException {
 		
-		/*response.setContentType("text/html");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE htmL><head><title>Create a dynamic magic square size</title>"+
 		"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">"+
@@ -25,8 +25,8 @@ public class SetMagicSquareSize extends HttpServlet{
 		ServletGenerateMagicSquare.returnMagicSquare(Integer.parseInt(request.getParameter("size")))+
 		"</table>"+
 		"<br><br><a href=\"index.html\">Go back to index!</a>"+
-		"</body></html>");*/
-		response.sendRedirect("http://www.google.com");
+		"</body></html>");
+		//response.sendRedirect("http://www.google.com");
 
 	}
 }

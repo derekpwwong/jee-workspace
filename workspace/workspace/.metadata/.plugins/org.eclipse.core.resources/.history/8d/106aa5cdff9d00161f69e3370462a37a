@@ -1,0 +1,72 @@
+package encryptHuffmanCode;
+
+public class EncryptHuffmanCode {
+	public static String decrypt(){
+		 String text = "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved"+
+			      "up garrets am cottage private. The far attachment discovered celebrated decisively surrounded for and. Sir new the particular frequently"+
+			      "indulgence excellence how. Wishing an if he sixteen visited tedious subject it. Mind mrs yet did quit high even you went. Sex against the"+
+			      "two however not nothing prudent colonel greater. Up husband removed parties staying he subject mr. Repulsive questions contented him few"+
+			      "extensive supported. Of remarkably thoroughly he appearance in. Supposing tolerably applauded or of be. Suffering unfeeling so objection"+
+			      "agreeable allowance me of. Ask within entire season sex common far who family. As be valley warmth assure on. Park girl they rich hour new"+
+			      "well way you. Face ye be me been room we sons fond. Ye on properly handsome returned throwing am no whatever. In without wishing he of picture"+
+			      "no exposed talking minutes. Curiosity continual belonging offending so explained it exquisite. Do remember to followed yourself material mr"+
+			      "recurred carriage. High drew west we no or at john. About or given on witty event. Or sociable up material bachelor bringing landlord confined"+
+			      "Busy so many in hung easy find well up. So of exquisite my an explained remainder. Dashwood denoting securing be on perceive my laughing so."+
+			      "Up am intention on dependent questions oh elsewhere september. No betrayed pleasure possible jointure we in throwing. And can event rapid any"+
+			      "shall woman green. Hope they dear who its bred. Smiling nothing affixed he carried it clothes calling he no. Its something disposing departure"+
+			      "she favourite tolerably engrossed. Truth short folly court why she their balls. Excellence put unaffected reasonable mrs introduced conviction"+
+			      "she. Nay particular delightful but unpleasant for uncommonly who. Had repulsive dashwoods suspicion sincerity but advantage now him. Remark"+
+			      "easily garret nor nay. Civil those mrs enjoy shy fat merry. You greatest jointure saw horrible. He private he on be imagine suppose. Fertile"+
+			      "beloved evident through no service elderly is. Blind there if every no so at. Own neglected you preferred way sincerity delivered his attempted."+
+			      "To of message cottage windows do besides against uncivil. Old unsatiable our now but considered travelling impression. In excuse hardly summer"+
+			      "in basket misery. By rent an part need. At wrong of of water those linen. Needed oppose seemed how all. Very mrs shed shew gave you. Oh"+
+			      "shutters do removing reserved wandered an. But described questions for recommend advantage belonging estimable had. Pianoforte reasonable"+
+			      "as so am inhabiting. Chatty design remark and his abroad figure but its.";
+		return text;
+	}
+	public static String encrypt(){
+		 String text = decrypt();
+		 String row = " ";
+		 char[] charText = text.toCharArray();
+		    
+		    String[] huffmanCode = {"100","0010","0011","1111","1110","1100","1011","1010","0110","0101","11011",
+		                  "01111","01001","01000","00011","00010","00001","00000","110101","011101",
+		                  "011100","1101001","110100011","110100001","110100000","1101000101","11010001000"}; 
+		    
+		    String[] ascii_value = {"32","97","98","99","100","101","102","103","104","105","106","107","108","109","110",
+		                          "111","112","113","114","115","116","117","118","119","120","121","122"};
+
+		    
+		    String letters = " abcdefghijklmnopqrstuvwxyz";
+		    char[] letter = letters.toCharArray();
+		    
+		    int[] occurence = new int [27];
+		    float [] frequency = new float [27];
+		    int totalSum = 0;
+		    
+		    for(int i = 0; i<letter.length; i++){
+		      
+		      for(int c =0; c < charText.length; c++){
+		        //letter is found in text
+		        if(charText[c] == letter[i]){
+		        	occurence[i]+=1;
+		        }
+		      }
+		    
+		  	}
+		  
+		    for(int g = 0; g< occurence.length; g++){
+		    	totalSum += occurence[g];
+		    }
+		   for(int t = 0; t< occurence.length; t++){
+		       frequency[t] = (float)occurence[t]/totalSum;
+		    	//System.out.println(frequency[t]+" "+occurence[t]+" "+totalSum);
+		    }
+		    
+		      for(int b = 0; b< occurence.length; b++){
+		    	row +="<tr><td>"+letter[b]+"</td><td>"+occurence[b]+"</td><td>"+frequency[b]+"</td><td>"+huffmanCode[b]+"</td></tr>";
+		    }
+		
+		      return row;
+	}
+}
