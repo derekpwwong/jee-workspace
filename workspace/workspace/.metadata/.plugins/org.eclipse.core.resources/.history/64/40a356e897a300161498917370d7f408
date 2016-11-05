@@ -59,8 +59,6 @@
 	</ul>
 	
 	<div><h1>Random Number: JSP Declarations V1</h1></div>
-	<%! private int randNum = RandomNumberGenerator.returnRandomNumber(100); %>
-	<div>Private Randomn NUmber<%=randNum %></div>
 	<a href="index.html">GO back home</a>
 </body>
 </html>

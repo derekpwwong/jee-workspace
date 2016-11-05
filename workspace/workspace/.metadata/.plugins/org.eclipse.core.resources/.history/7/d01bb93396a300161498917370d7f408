@@ -26,41 +26,13 @@
 	</ul>
 	<%! private int x=0; %>
 	<h2>x:<%= ++x %></h2>
-	<div><h1>Random Number: JSP Expressions</h1></div>
+	<div>Radnom Number: JSP Expressions</div>
 	<div><%= RandomNumberGenerator.returnRandomNumber(100) %></div>
 	<div><%= RandomNumberGenerator.returnRandomNumber(100) %></div>
 	<div><%= RandomNumberGenerator.returnRandomNumber(100) %></div>
 	<div><%= RandomNumberGenerator.returnRandomNumber(100) %></div>
 	<div><%= RandomNumberGenerator.returnRandomNumber(100) %></div>
 	
-	<% for(int i=0;i<10;i++)%>
-	<%{%>
-	<div>a<%= RandomNumberGenerator.returnRandomNumber(100) %></div>
-	<%}%>
-	
-	<div><h1>Random Number: JSP Scriplets V1</h1></div>
-	<ul>
-	<%
-	int numEntries = RandomNumberGenerator.returnRandomNumber(100);
-	for(int b = 0; b< numEntries;b++){
-		out.println("<li>"+RandomNumberGenerator.returnRandomNumber(100)+"</li>");
-	}
-	%>
-	</ul>
-	
-	<div><h1>Random Number: JSP Scriplets V2</h1></div>
-	<ul>
-	<%
-	int numEntriesAgain = RandomNumberGenerator.returnRandomNumber(100);
-	for(int b = 0; b< numEntriesAgain;b++){%><%
-		out.println("<li>"+RandomNumberGenerator.returnRandomNumber(100)+"</li>");
-	}
-	%>
-	</ul>
-	
-	<div><h1>Random Number: JSP Declarations V1</h1></div>
-	<%! private int randNum = RandomNumberGenerator.returnRandomNumber(100); %>
-	<div>Private Randomn NUmber<%=randNum %></div>
 	<a href="index.html">GO back home</a>
 </body>
 </html>
