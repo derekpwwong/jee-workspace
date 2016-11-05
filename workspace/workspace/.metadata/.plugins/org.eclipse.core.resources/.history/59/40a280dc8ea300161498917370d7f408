@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Set the Color Size and Weight</title>
+</head>
+<body style="background-color:#fdf5e6;">
+<h2 style="text-align:center;">Enter Size Color Weight</h2>
+<!-- action is the url of the server side that will receive data -->
+  <form action="example.jsp" method="get">
+<center>
+<label>
+	Size:
+	<input type="text" name="size" value="5"></input><br>
+</label>
+
+<label>
+	Color:
+	<input type="text" name="color" value="5"></input><br>
+</label>
+
+<label>
+	Weight:
+	<input type="text" name="weight" value="5"></input><br>
+</label>
+<input type="submit" value="submit">
+</center>
+</form>
+</body>
+</html>
